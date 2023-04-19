@@ -112,7 +112,7 @@ menText+= `${i === 0 ? '\n\n' : '\n'}🥈 *@${members[i].split('@')[0]}*`
 
 }  
 
-this client.sendMessage(M.from,{text:menText,mentions: participants.map(a => a.id)},{quoted:M})
+ client.sendMessage(M.from,{text:menText,mentions: participants.map(a => a.id)},{quoted:M})
 
     }
 }
