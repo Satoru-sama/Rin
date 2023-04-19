@@ -73,11 +73,10 @@ module.exports = class command extends Command {
 
                 M.sender.split('@')[0]
 
-            }*
+            }
 
-            `
+            
 
-           this client.sendMessage(M.from,{text:menText,mentions: participants.map(a => a.id)},{quoted:M})
 
         
 
