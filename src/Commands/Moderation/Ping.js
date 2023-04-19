@@ -37,13 +37,13 @@ module.exports = class command extends Command {
   
 
     
-     execute = async(client, m, { text, groupName,flags, args,command,isAdmin,participants,groupAdmin,pushName,iscreator}) => {
+     execute = async(client, M, { text, groupName,flags, args,command,isAdmin,participants,groupAdmin,pushName,iscreator}) => {
 
-		if(!isAdmin) return client.sendMessage(m.from,{text:"This is admin only command"},{quoted:m})
+		if(!isAdmin) return client.sendMessage(M.from,{text:"This is admin only command"},{quoted:M})
 
         flags.forEach((flag) => (text = text.replace(flag, '')))
 
-        const message = args ? args.join(' ') : m.quoted ? m.quoted.msg : ''
+        const message = args ? args.join(' ') : M.quoted ? M.quoted.msg : ''
 
         let  menText = `${message !== '' ? `🧧 *Message:* ${message}\n\n` : ''}🍀 *Group:* ${
 
@@ -51,7 +51,7 @@ module.exports = class command extends Command {
 
         }\n👥 *Members:* ${participants.length}\n📣 *Tagger: @${
 
-            m.sender.split('@')[0]
+            M.sender.split('@')[0]
 
         }*
 
@@ -63,7 +63,7 @@ module.exports = class command extends Command {
 
         if(flags.includes('--h')){
 
-            const message = text ?text : m.quoted ? m.quoted.msg : ''
+            const message = text ?text : M.quoted ? M.quoted.msg : ''
 
             let  menText = `${message !== '' ? `🧧 *Message:* ${message}\n\n` : ''}🍀 *Group:* ${
 
@@ -71,13 +71,13 @@ module.exports = class command extends Command {
 
             }\n👥 *Members:* ${participants.length}\n📣 *Tagger: @${
 
-                m.sender.split('@')[0]
+                M.sender.split('@')[0]
 
             }*
 
             `
 
-            client.sendMessage(m.from,{text:menText,mentions: participants.map(a => a.id)},{quoted:m})
+           this client.sendMessage(M.from,{text:menText,mentions: participants.map(a => a.id)},{quoted:M})
 
         
 
@@ -113,7 +113,7 @@ menText+= `${i === 0 ? '\n\n' : '\n'}🥈 *@${members[i].split('@')[0]}*`
 
 }  
 
-client.sendMessage(m.from,{text:menText,mentions: participants.map(a => a.id)},{quoted:m})
+this client.sendMessage(M.from,{text:menText,mentions: participants.map(a => a.id)},{quoted:M})
 
     }
 }
