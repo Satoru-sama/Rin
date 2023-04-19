@@ -37,7 +37,7 @@ module.exports = class command extends Command {
   
 
     
-     execute = async(client, M, { MenText, groupName,flags, args,command,isAdmin,participants,groupAdmin,pushName,iscreator}) => {
+     execute = async(client, M, { menText, text, groupName,flags, args,command,isAdmin,participants,groupAdmin,pushName,iscreator}) => {
 
 		if(!isAdmin) return client.sendMessage(M.from,{text:"This is admin only command"},{quoted:M})
 
