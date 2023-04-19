@@ -73,7 +73,7 @@ module.exports = class command extends Command {
 
                 M.sender.split('@')[0]
 
-            }
+            }`
 
             
 
