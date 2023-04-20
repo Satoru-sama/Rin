@@ -44,6 +44,7 @@
     "qrcode-terminal": "^0.12.0",
     "reddit-image-fetcher": "^2.0.11",
     "unofficial-carbon-now": "^1.0.6",
-    "wa-sticker-formatter": "^4.3.2"
+    "wa-sticker-formatter": "^4.3.2,
+    "welcomer-gif": "^2.0.0"
   }
 }
